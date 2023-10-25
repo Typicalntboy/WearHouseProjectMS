@@ -1,0 +1,202 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+.navbar{
+    font-family: poppins;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 8px 25px #888888;
+    padding: 0px 10px;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+.navbar #logo{
+    font-weight: bold;
+    font-size: 28px;
+    margin: 0px 10px;
+    font-family: roboto;
+}
+
+li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 8px;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+#hamburger{
+    display: none;
+}
+#burgerbtn{
+    font-size: 3rem;
+    display: none;
+    border: 1px solid;
+    height: 40px;
+    align-items: center;
+    width: 50px;
+    justify-content: center;
+    border-radius: 15%;
+    border-color: #888888;
+    cursor: pointer;
+}
+.navRespons{
+    margin-left: -10px;
+    padding-left: 20px;
+    background: white;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    box-shadow: 0px 10px 9px -3px #888888;
+}
+.navRespons a{
+    margin-bottom: 10px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+a{
+    color: black;
+}
+
+
+@media screen and (max-width:600px) {
+    #burgerbtn{
+        display:flex;
+    }
+    .navRight{
+        display: none;
+    }
+    .catabout{
+        display: none;
+    }
+    #hamburger:checked ~ .navRespons{
+        display: flex;
+    }
+    #logo { 
+        font-size: 25px;
+    }
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body { 
+    top: 0;
+    left: 0;
+    background-color: white !important;
+    background-position: center;
+}
+
+header { 
+    padding: 0px 20px;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    align-items:  center;
+    justify-content: space-between;
+    box-shadow: 0px 8px 25px #888888;
+    margin: 0px 0px;
+}
+
+.navbarMain { 
+    display: flex;
+}
+
+#Logo { 
+    font-weight: 600;
+}
+
+.navbarMain a{ 
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+}
+
+.logReg a{
+    color: black; 
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.navrespon{
+    margin-left: -10px;
+    padding-left: 20px;
+    background: white;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    box-shadow: 0px 10px 9px -3px #888888;
+}
+.navrespon a{
+    margin-bottom: 10px;
+}
+.ddatas{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+a{
+   color: black;
+}
+
+#hamburger {  
+    display: none;
+}
+
+.ham {
+    background-color: #888888;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ham { 
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .catbout { 
+        display: none;
+    }
+
+    #logReg{ 
+        display: none;
+    }
+
+    .ham {  
+        border: 0.1px solid;
+        box-shadow: 0px 8px 25px #888888;
+        background-color: white;
+        width: 40px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        border-radius: 20%;
+    }   
+
+    #hamburger:checked , .logReg{ 
+        display: block;
+        display: grid;
+    } */

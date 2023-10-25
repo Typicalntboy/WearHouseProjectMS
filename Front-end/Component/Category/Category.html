@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Category.css">
+    <link rel="stylesheet" href="../../Asset/Global/navbar.css">
+    <link rel="stylesheet" href="../../Asset/Global/footer.css">
+    <script src="../../script/jquerry.js"></script>
+
+    <title>Category</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navLeft">
+            <ul>
+                <a href="../Mainpage/home.html" id="logo">WearHouse</a>
+                <div class="catabout">
+                    <li><a href="../Category/Category.html">Category</a></li>
+                    <li><a href="../About/About.html">About Us</a></li>
+                </div>
+            </ul>
+        </div>
+        <div class="navRight">
+            <ul>
+                <li><a href="../Login/login.html">Login</a></li>
+                <li><a href="../Register/Register.html">Register</a></li>
+            </ul>  
+        </div>
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" id="burgerbtn">&equiv;</label>
+
+        <!-- Navbar Responsive -->
+        <div class="navRespons">
+            <div class="menu">
+                <a href="../Category/Category.html">Category</a>
+                <a href="../About/About.html">About Us</a>
+            </div>
+            <a href="../Login/login.html">Login</a>
+            <a href="../Register/Register.html">Register</a>
+        </div>
+    </header>
+    
+    <!-- content -->
+    <div class="popup" id="boxID">
+        <div class="popupbox">
+            <div class="boxin">
+                <div class="boxheader">
+                    <p class="poptitle">Add Category</p>
+                    <button class="closebtn"  onclick="tombolClose()">&times;</button>
+                </div>
+                <div class="catmid">
+                    <p id="isimid">Category</p>
+                    <input type="text" id="addctg">
+                </div>
+                <div class="btnSubmit">
+                    <button id="btnSubmit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="boxID2">
+        <div class="popupbox">
+            <div class="boxin">
+                <div class="boxheader">
+                    <p class="poptitle">Edit Category</p>
+                    <button class="closebtn"  onclick="tombolClose()">&times;</button>
+                </div>
+                <div class="catmid">
+                    <p id="isimid">Category</p>
+                    <input type="text">
+                </div>
+                <div class="btnEdit">
+                    <button id="btnEdit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="boxID3">
+        <div class="popupbox">
+            <div class="boxin">
+                <div class="boxheader">
+                    <p class="poptitle">Delete Category</p>
+                    <button class="closebtn"  onclick="tombolClose()">&times;</button>
+                </div>
+                <div class="catmid">
+                    <p id="isimid">
+                        <h4>
+                            This Action is irreversible. Are you sure you want to delete this category?
+                        </h4>
+                    </p>
+                </div>
+                <div class="btnDlt">
+                    <button id="btnDlt">delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="catcontainer">
+        <div class="catBox">
+            <p id="judulbox">Product Category</p>
+            <button class="addcat" id="btnCat" onclick="ctgAdd()">Add Category</button>
+            <div class="isicat">
+                <table class="tabel">
+                    <tr>
+                        <th>No.</th>
+                        <th>Category</th>
+                        <th>Action.</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Shoes</td>
+                        <td><button id="editbtn" onclick="ctgEdit()">Edit</button><button id="dltbtn" onclick="ctgDel()">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Hats</td>
+                        <td><button id="editbtn" onclick="ctgEdit()">Edit</button><button id="dltbtn"onclick="ctgDel()">Delete</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="trademarks">
+            <div id="socialIcon" class="socialIcons">
+                <a href="https://twitter.com/M_sajid28" id="twitter">
+                    <img src="../../Asset/twitter-icon-white.png" alt="Twitter Bio" width="10px" height="10px">
+                </a>
+                <a href="https://web.facebook.com/sajid.2810/" id="facebook">
+                    <img src="../../Asset/facebook-logo-white.png" alt="Facebook Bio" width="10px" height="10px">
+                </a>
+                <a href="https://www.instagram.com/typicalntboy/" id="instagram">
+                    <img src="../../Asset/Instagram-icon-white.png" alt="Instagram Bio" width="10px" height="10px">
+                </a>
+            </div>
+            <p>Copyright &copy; 2023 Muhammad Sajid. All Rights Reserved.</p>
+        </div>
+    </footer> 
+</body>
+<script>
+    $("#boxID").hide();
+    $("#boxID2").hide();
+    $("#boxID3").hide();
+    function ctgAdd() {
+        $("#boxID").show();
+    }
+    function ctgEdit() {
+        $("#boxID2").show();
+    }
+    function ctgDel() {
+        $("#boxID3").show();
+    }
+    function tombolClose() {
+        $("#boxID").hide();
+        $("#boxID2").hide();
+        $("#boxID3").hide();
+    }
+
+    // untuk menambahkan category
+    $("#btnSubmit").click(function() {
+        // mendapatkan nilai input pada add category
+        var $addctg = $("#addctg").val();
+        // mendapatkan tabel
+        var $tabel = $(".tabel");
+
+        // hitung jumlah baris saat ini untuk menuntukan urutan berapa
+        var rowCount = $tabel.find("tr").length;
+        console.log(rowCount);
+        // buat baris baru
+        var newRow = $("<tr></tr>");
+        console.log(newRow);
+        // isi baris dengan sel
+        newRow.append("<td>" + rowCount + ".</td>");
+        newRow.append("<td>"+ $addctg + "</td>");
+        newRow.append('<td><button id="editbtn" onclick="ctgEdit()">Edit</button><button id="dltbtn" onclick="ctgDel()">Delete</button></td>');
+        
+        //tambahkan garis pada tabel baru\
+        console.log(newRow);
+        $tabel.append(newRow);
+        $("#boxID").hide();
+        $("#boxInput").val(''); //mengosongkan input setelah menambahkan kedalam tabel
+    });
+
+</script>
+</html>

@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body { 
+    top: 0;
+    left: 0;
+    background-color: white !important;
+    background-position: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+  
+.trademarks {
+    text-decoration: none;
+    position: absolute;
+    height: 8%;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.8em;
+    background-color: black;
+    color: white;
+}
+
+#twitter, #facebook {
+    margin-right: 3px;
+}

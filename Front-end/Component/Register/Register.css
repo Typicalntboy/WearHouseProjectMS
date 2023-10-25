@@ -1,0 +1,149 @@
+.homecontainer { 
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.borderBox { 
+    width: 600px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px;
+    box-shadow: 0px 1px 13px 7px #8889;
+}
+
+.borderBox2 { 
+    background-color: white;
+    width: 570px;
+    height: 300px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid;
+    
+}
+
+.boxTitle {
+    background-color: #E8E9EB;
+    width: 100%;
+    height: 50px; 
+    border-bottom: 1px solid; 
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+.boxTitle p {
+    font-size: 18px;
+}
+
+.boxAsset { 
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 60px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.loginPage{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form p {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+#name, #email, #password, #cpassword {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    width: 450px;
+    /* background-color: red; */
+}
+
+#name p, #email p, #password p, #cpassword p { 
+    margin-right: 0px;
+    font-size: 12px;
+}
+
+#name p{
+    margin-left: 110px;
+}
+
+#email p{
+    margin-left: 60px;
+}
+
+#password p { 
+    margin-left: 87px;
+}
+
+#cpassword p { 
+    margin-left: 35px;
+}
+
+#name input, #email input, #password input, #cpassword input { 
+    width: 290px;
+}
+
+
+input[type="text"], input[type="email"], input[type=password] {
+    border: 1px solid rgba(65, 61, 61, 0.3);
+    border-radius: 4px;
+    width: 300px;
+    height: 8mm;
+}
+
+.btnRegist {
+    background-color: blue;
+    border-color: blue;
+    border-radius: 4px;
+    color: white;
+    width: 80px;
+    height: 30px;
+}
+
+.remindAcc { 
+    margin-left: 160px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.registCon{
+    margin-left: 160px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.forgetPass{
+    font-size: 12;
+    padding: 10px;
+}
+
+input[type="checkbox"] {
+    width: 5%;
+}
