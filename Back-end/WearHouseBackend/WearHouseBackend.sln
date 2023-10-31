@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearHouseBackend", "WearHouseBackend\WearHouseBackend.csproj", "{9CD8E28C-AB8B-49F4-9D4A-1EE54F50C855}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CD8E28C-AB8B-49F4-9D4A-1EE54F50C855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD8E28C-AB8B-49F4-9D4A-1EE54F50C855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD8E28C-AB8B-49F4-9D4A-1EE54F50C855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD8E28C-AB8B-49F4-9D4A-1EE54F50C855}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D17E509-D99B-4AB0-B7FB-9A76821A9E10}
+	EndGlobalSection
+EndGlobal

@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="Register.css">
     <link rel="stylesheet" href="../../Asset/Global/navbar.css">
     <link rel="stylesheet" href="../../Asset/Global/footer.css">
-    <title>Dash</title>
+    <script src="../../script/Register.js"></script>
+    <script src="../../script/jquerry.js"></script>
+    <title>Register</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -51,30 +53,27 @@
                         <form>
                             <section id="name">
                                 <p>Name</p>
-                                <input type="text" name="name" size="20" required>
+                                <input type="text" id="uname" name="name" size="20" required>
                             </section>
                             <section id="email">
                                 <p>Email Address</p>
-                                <input type="email" name="inputEmail"  size="20" required>
+                                <input type="email" id="uemail" name="inputEmail"  size="20" required>
                             </section>
                             <section id="password">
                                 <p>Password</p>
-                                <input type="password" name="inputPassword" size="20" required>
+                                <input type="password" id="upassword" name="inputPassword" size="20" required>
                             </section>
                             <section id="cpassword">
                                 <p>Confirm Password</p>
-                                <input type="password" name="inputPassword" size="20" required>
+                                <input type="password" id="ucpassword" name="inputPassword" size="20" required>
                             </section>
-                            <div class="remindAcc">
+                            <div class="confirmAcc">
                                 <p>
-                                    <input name="terms" type="checkbox"> By clicking register, I agree to the terms and conditions.
+                                    <input id="uconfirmAcc" name="terms" type="checkbox"> By clicking register, I agree to the terms and conditions.
                                 </p>
                             </div>
                             <div class="registCon">
-                                <button id="registButton" type="button" class="btnRegist">REGISTER</button>
-                                <div class="forgetPass">
-                                    <a href="#">Forget Your Password?</a>
-                                </div>
+                                <button id="uregistButton" type="button" onclick="runRegister()" class="btnRegist">REGISTER</button>
                             </div>
                         </form>
                     </div>

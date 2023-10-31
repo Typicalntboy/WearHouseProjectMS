@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="About.css">
     <link rel="stylesheet" href="../../Asset/Global/navbar.css">
     <link rel="stylesheet" href="../../Asset/Global/footer.css">
-    <title>Dash</title>
+    <script src="../../script/jquerry.js"></script>
+    <title>About Us</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -22,9 +23,16 @@
         </div>
         <div class="navRight">
             <ul>
-                <li><a href="../Login/login.html">Login</a></li>
-                <li><a href="../Register/Register.html">Register</a></li>
-            </ul>  
+                <li><input type="checkbox" id="triangle"></li>
+                <li><p id="userLog"></p></li>
+                <li><label for="triangle" id="dropDown">▼</label></li>
+                <button id="logOut" onclick="runLogOut()">Log Out</button>
+
+                <div class="loginRegisterOut">
+                    <li><a href="../Login/login.html">Login</a></li>
+                    <li><a href="../Register/Register.html">Register</a></li>
+                </div>
+            </ul>   
         </div>
         <input type="checkbox" id="hamburger">
         <label for="hamburger" id="burgerbtn">&equiv;</label>
@@ -81,4 +89,5 @@
         </div>
     </footer>
 </body>
+<script src="../../script/AccStat.js"></script>
 </html>

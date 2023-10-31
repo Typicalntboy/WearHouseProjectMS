@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="../../Asset/Global/navbar.css">
     <link rel="stylesheet" href="../../Asset/Global/footer.css">
+    <script src="../../script/jquerry.js"></script>
     <title>Dash</title>
 </head>
 <body>
@@ -23,8 +24,15 @@
         </div>
         <div class="navRight">
             <ul>
-                <li><a href="../Login/login.html">Login</a></li>
-                <li><a href="../Register/Register.html">Register</a></li>
+                <li><input type="checkbox" id="triangle"></li>
+                <li><p id="userLog"></p></li>
+                <li><label for="triangle" id="dropDown">▼</label></li>
+                <button id="logOut" onclick="runLogOut()">Log Out</button>
+
+                <div class="loginRegisterOut">
+                    <li><a href="../Login/login.html">Login</a></li>
+                    <li><a href="../Register/Register.html">Register</a></li>
+                </div>
             </ul>  
         </div>
         <input type="checkbox" id="hamburger">
@@ -43,7 +51,7 @@
     
     <!-- content -->
     <div class="homecontainer">
-        <div class="dashBox">
+        <div class="dashBox" id="dashHomeLogin">
            <div class="dashBox2">
                 <div class="dashTitle">
                     <P>Dashboard</P>
@@ -73,4 +81,34 @@
         </div>
     </footer> 
 </body>
+<script src="../../script/AccStat.js"></script>
+<!-- <script>
+    $(".homecontainer").hide(); 
+   document.addEventListener("DOMContentLoaded", function(){
+        // if(window.location.href.indexOf('home.html') === -1){
+        //     window.location.href = '../MainPage/home.html';
+        // }
+        if(localStorage.getItem('IdUser') == null){
+            $(".homecontainer").hide();
+        }else{
+            $("#userLog").text(localStorage.getItem('NameUser'));
+            $(".homecontainer").show();
+            $(".loginRegisterOut").hide();
+            $("#dropDown").show();
+            $("#userLog").show();
+        }     
+    });
+
+    $("#triangle").on("change", function (){
+        if($(this).is(":checked")){
+            $('#logOut').show();
+        }else { 
+            $('#logOut').hide();
+        }
+    })
+
+    function doLogOut(){
+
+    }
+</script> -->
 </html>

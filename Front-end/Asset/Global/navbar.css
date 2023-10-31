@@ -88,6 +88,21 @@ a{
     }
 }
 
+#triangle, #userLog, #dropDown{
+    display: none;
+}
+
+#logOut{
+    display: none;
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 0px;
+    padding: 10px 80px;
+    padding-left: 5px !important;
+    border: solid 0.5px;
+    border-radius: 4px;
+}
+
 /* * {
     margin: 0;
     padding: 0;

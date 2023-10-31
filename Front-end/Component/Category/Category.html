@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="../../Asset/Global/navbar.css">
     <link rel="stylesheet" href="../../Asset/Global/footer.css">
     <script src="../../script/jquerry.js"></script>
-
+    <script src="../../script/Login.js"></script>
+    <script src="../../script/Category.js"></script>
+    <!-- <script>
+        if(localStorage.getItem("UserId") == null){
+            window.window.location.href = "home.html";
+        }
+    </script> -->
     <title>Category</title>
 </head>
 <body>
@@ -24,8 +30,15 @@
         </div>
         <div class="navRight">
             <ul>
-                <li><a href="../Login/login.html">Login</a></li>
-                <li><a href="../Register/Register.html">Register</a></li>
+                <li><input type="checkbox" id="triangle"></li>
+                <li><p id="userLog"></p></li>
+                <li><label for="triangle" id="dropDown">▼</label></li>
+                <button id="logOut" onclick="runLogOut()">Log Out</button>
+
+                <div class="loginRegisterOut">
+                    <li><a href="../Login/login.html">Login</a></li>
+                    <li><a href="../Register/Register.html">Register</a></li>
+                </div>
             </ul>  
         </div>
         <input type="checkbox" id="hamburger">
@@ -52,10 +65,10 @@
                 </div>
                 <div class="catmid">
                     <p id="isimid">Category</p>
-                    <input type="text" id="addctg">
+                    <input type="text" id="boxInp">
                 </div>
                 <div class="btnSubmit">
-                    <button id="btnSubmit">Submit</button>
+                    <button id="btnSubmit" onclick="addCategory()">Submit</button>
                 </div>
             </div>
         </div>
@@ -69,10 +82,10 @@
                 </div>
                 <div class="catmid">
                     <p id="isimid">Category</p>
-                    <input type="text">
+                    <input type="text" id="boxInp2">
                 </div>
                 <div class="btnEdit">
-                    <button id="btnEdit">Submit</button>
+                    <button id="btnEdit" onclick="editCategory()">Submit</button>
                 </div>
             </div>
         </div>
@@ -92,7 +105,7 @@
                     </p>
                 </div>
                 <div class="btnDlt">
-                    <button id="btnDlt">delete</button>
+                    <button id="btnDlt" onclick="deleteCategory()">delete</button>
                 </div>
             </div>
         </div>
@@ -108,16 +121,6 @@
                         <th>No.</th>
                         <th>Category</th>
                         <th>Action.</th>
-                    </tr>
-                    <tr>
-                        <td>1.</td>
-                        <td>Shoes</td>
-                        <td><button id="editbtn" onclick="ctgEdit()">Edit</button><button id="dltbtn" onclick="ctgDel()">Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td>2.</td>
-                        <td>Hats</td>
-                        <td><button id="editbtn" onclick="ctgEdit()">Edit</button><button id="dltbtn"onclick="ctgDel()">Delete</button></td>
                     </tr>
                 </table>
             </div>
@@ -144,47 +147,8 @@
 </body>
 <script>
     $("#boxID").hide();
-    $("#boxID2").hide();
-    $("#boxID3").hide();
-    function ctgAdd() {
-        $("#boxID").show();
-    }
-    function ctgEdit() {
-        $("#boxID2").show();
-    }
-    function ctgDel() {
-        $("#boxID3").show();
-    }
-    function tombolClose() {
-        $("#boxID").hide();
-        $("#boxID2").hide();
-        $("#boxID3").hide();
-    }
-
-    // untuk menambahkan category
-    $("#btnSubmit").click(function() {
-        // mendapatkan nilai input pada add category
-        var $addctg = $("#addctg").val();
-        // mendapatkan tabel
-        var $tabel = $(".tabel");
-
-        // hitung jumlah baris saat ini untuk menuntukan urutan berapa
-        var rowCount = $tabel.find("tr").length;
-        console.log(rowCount);
-        // buat baris baru
-        var newRow = $("<tr></tr>");
-        console.log(newRow);
-        // isi baris dengan sel
-        newRow.append("<td>" + rowCount + ".</td>");
-        newRow.append("<td>"+ $addctg + "</td>");
-        newRow.append('<td><button id="editbtn" onclick="ctgEdit()">Edit</button><button id="dltbtn" onclick="ctgDel()">Delete</button></td>');
-        
-        //tambahkan garis pada tabel baru\
-        console.log(newRow);
-        $tabel.append(newRow);
-        $("#boxID").hide();
-        $("#boxInput").val(''); //mengosongkan input setelah menambahkan kedalam tabel
-    });
-
+$("#boxID2").hide();
+$("#boxID3").hide();
 </script>
+<script src="../../script/AccStat.js"></script>
 </html>

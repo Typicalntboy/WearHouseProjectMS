@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="../../Asset/Global/navbar.css">
     <link rel="stylesheet" href="../../Asset/Global/footer.css">
-    <title>Dash</title>
+    <script src="../../script/Login.js"></script>
+    <script src="../../script/jquerry.js"></script>
+    <title>Login</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -51,19 +53,19 @@
                         <form>
                             <section id="email">
                                 <p>Email Address</p>
-                                <input type="email" name="inputEmail"  size="20" required>
+                                <input type="email" id="emailinput" name="inputEmail">
                             </section>
                             <section id="password">
                                 <p>Password</p>
-                                <input type="password" name="inputPassword" size="20" required>
+                                <input type="password" id="passwordinput" name="inputPassword">
                             </section>
                             <div class="remindAcc">
                                 <p>
-                                    <input name="rememberMe" type="checkbox"> Remember me
+                                    <input name="rememberMe" id="remindAcc" type="checkbox"> Remember me
                                 </p>
                             </div>
                             <div class="loginCon">
-                                <button id="loginButton" type="button" class="btnlogin">LOGIN</button>
+                                <button id="loginButton" type="button" onclick="runLogin()" class="btnlogin">LOGIN</button>
                                 <div class="forgetPass">
                                     <a href="#">Forget Your Password?</a>
                                 </div>
